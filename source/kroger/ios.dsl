@@ -1,7 +1,7 @@
-workspace extends KrogerSoftwareSystem.dsl {
+workspace extends kroger.dsl {
 
     model {
-        !element iOS {
+        !element ios {
             main = component "App Main"
         }
 

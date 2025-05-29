@@ -1,4 +1,4 @@
-workspace extends KrogerSoftwareSystem.dsl {
+workspace extends kroger.dsl {
 
     model {
         !element android {

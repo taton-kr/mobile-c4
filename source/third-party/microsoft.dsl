@@ -1,4 +1,4 @@
-workspace extends ../SoftwareSystem.dsl {
+workspace extends ../catalog.dsl {
 
     model {
         # Microsoft services
