@@ -1,5 +1,4 @@
-workspace "System Catalog" "Description" {
-
+workspace "System Catalog" {
     !identifiers heirarchical
 
     model {
@@ -9,29 +8,25 @@ workspace "System Catalog" "Description" {
         patient = person "Patient"
         shopper = person "Shopper"
 
-        # First Party Systems
-        kroger = softwareSystem "Kroger eCommerce System"
+        # System Contexts
+        android = softwareSystem "Android Device" {
+            tags "Software System 3p
+        }
 
-        # Third Party Systems
-        adobe = softwareSystem "Adobe Services"
-        akamai = softwareSystem "Akamai Services"
-        amex = softwareSystem "AmEx Services"
-        dynatrace = softwareSystem "Dynatrace Services"
-        google = softwareSystem "Google Services"
-        lexisNexus = softwareSystem "LexisNexus Services"
-        microsoft = softwareSystem "Microsoft Services"
-        pureRed = softwareSystem "PureRed Services"
-        qualtrics = softwareSystem "Qualtrics Services"
-        salesforce = softwareSystem "Salesforce Services"
-        transUnion = softwareSystem "TransUnion Services"
-        worldPay = softwareSystem "WorldPay Services"
+        ios = softwareSystem "iOS Device" {
+            tags "Software System 3p
+        }
+
+        www = softwareSystem "Internet" {
+            tags "Software System 3p
+        }
     }
 
     views {
-        systemContext kroger "System Context" {
-            include *
-            autolayout lr
-        }
+        # systemContext kroger "System Context" {
+        #     include *
+        #     autolayout lr
+        # }
 
         styles {
             element "Element" {
@@ -61,7 +56,5 @@ workspace "System Catalog" "Description" {
                 background #5f5f5f
             }
         }
-
     }
-
 }
