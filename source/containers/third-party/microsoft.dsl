@@ -8,3 +8,4 @@ workspace extends ../../workspace.dsl {
             }
         }
     }
+}

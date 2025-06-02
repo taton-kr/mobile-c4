@@ -1,5 +1,5 @@
-workspace "System Catalog" {
-    !identifiers heirarchical
+workspace "Kroger Mobile" "Kroger Mobile Applications System Context" {
+    !identifiers hierarchical
 
     model {
         # Personas
@@ -10,23 +10,23 @@ workspace "System Catalog" {
 
         # System Contexts
         android = softwareSystem "Android Device" {
-            tags "Software System 3p
+            tags "Software System 3p"
         }
 
         ios = softwareSystem "iOS Device" {
-            tags "Software System 3p
+            tags "Software System 3p"
         }
 
         www = softwareSystem "Internet" {
-            tags "Software System 3p
+            tags "Software System 3p"
         }
     }
 
     views {
-        # systemContext kroger "System Context" {
-        #     include *
-        #     autolayout lr
-        # }
+        systemContext android "AndroidSystem" {
+            include *
+            autolayout lr
+        }
 
         styles {
             element "Element" {
