@@ -55,3 +55,4 @@ workspace extends ../workspace.dsl {
             }
         }
     }
+}
