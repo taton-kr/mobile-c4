@@ -30,7 +30,7 @@ workspace "Kroger Mobile" "Kroger Mobile Applications System Context" {
 
         styles {
             element "Element" {
-                color #ffffff
+                color #1f1f1f
                 shape RoundedBox
             }
             element "Person" {
@@ -38,22 +38,22 @@ workspace "Kroger Mobile" "Kroger Mobile Applications System Context" {
                 shape person
             }
             element "Software System" {
-                background #6f6f9f
+                background #81C5F4
             }
             element "Container" {
-                background #4f4f9f
+                background #2874C1
             }
             element "Component" {
-                background #2f2f9f
+                background #074085
             }
             element "Software System 3p" {
-                background #9f9f9f
+                background #FFAC02
             }
             element "Container 3p" {
-                background #7f7f7f
+                background #C54E04
             }
             element "Component 3p" {
-                background #5f5f5f
+                background #732102
             }
         }
     }
