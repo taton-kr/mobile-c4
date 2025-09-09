@@ -1,0 +1,20 @@
+shopper -> eCommerce.android.main "Tap to pay"
+eCommerce.android.main -> eCommerce.android.krogerPay "Initiate payment"
+eCommerce.android.krogerPay -> eCommerce.android.core "Select payment method"
+eCommerce.android.core -> eCommerce.android.tmx "Verify payment method"
+eCommerce.android.tmx -> lexisNexus.tms "Ask LexisNexus to verify"
+eCommerce.android.core -> eCommerce.android.fraudForce "Check for fraud"
+eCommerce.android.fraudForce -> transUnion.ff "Ask TransUnion if fraudulent"
+eCommerce.android.core -> eCommerce.android.inmobile "Check for fraud"
+eCommerce.android.inmobile -> amex.inmobile "Ask Amex if fraudulent"
+
+shopper -> eCommerce.android.main "Taps featured search result"
+eCommerce.android.main -> eCommerce.android.deeplink "Process deeplink"
+eCommerce.android.main -> eCommerce.android.telemetry "Create and report Metron"
+eCommerce.android.main -> eCommerce.android.firebaseAnalytics "Process Metron and send event"
+eCommerce.android.firebaseAnalytics -> google.firebaseAnalytics "Send event
+eCommerce.android.main -> eCommerce.mobileApi.clickstream "Process Metron and send event"
+
+shopper -> eCommerce.android.main "Unintentional crash"
+eCommerce.android.main -> eCommerce.android.firebaseCrashlytics "Send crash stack and metadata"
+eCommerce.android.firebaseCrashlytics -> google.firebaseCrashlytics "Send crash stack and metadata"

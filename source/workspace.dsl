@@ -3,9 +3,6 @@ workspace "Kroger Mobile" "Kroger Mobile Applications System Context" {
 
     model {
         # Personas
-        author = person "Content Author"
-        guest = person "Guest"
-        patient = person "Patient"
         shopper = person "Shopper"
 
         # System Contexts
@@ -23,18 +20,13 @@ workspace "Kroger Mobile" "Kroger Mobile Applications System Context" {
     }
 
     views {
-        systemContext android "AndroidSystem" {
-            include *
-            autolayout lr
-        }
-
         styles {
             element "Element" {
                 color #1f1f1f
                 shape RoundedBox
             }
             element "Person" {
-                background #1f1f1f
+                background #9f9f9f
                 shape person
             }
             element "Software System" {

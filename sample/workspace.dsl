@@ -8,58 +8,29 @@ workspace "Context" "Kroger's Mobile Stuff" {
         # Kroger eCommerce system
         eCommerce = softwareSystem "Kroger eCommerce System" {
             # Kroger Android mobile eCommerce application
-            android = container "Android Mobile Application"
+            !include model/android.dsl
 
             # Kroger iOS mobile eCommerce application
-            ios = container "iOS Mobile Application"
+            !include model/ios.dsl
 
             # Kroger mobile API services
-            mobileApi = container "Mobile API" {
-                clickstream = component "Clickstream"
-            }
+            !include model/mobileapi.dsl
         }
 
         # AmEx services
-        amex = softwareSystem "AmEx Services" {
-            tags "Software System 3p"
-            inmobile = container "Inmobile Service" {
-                tags "Container 3p"
-            }
-        }
+        !include model/amex.dsl
 
         # Google services
-        google = softwareSystem "Google Firebase Services" {
-            tags "Software System 3p"
-            firebaseAnalytics = container "Firebase Analytics Service" {
-                tags "Container 3p"
-            }
-            firebaseCrashlytics = container "Firebase Crashlytics Service" {
-                tags "Container 3p"
-            }
-            firebaseMessaging = container "Firebase Messaging Service" {
-                tags "Container 3p"
-            }
-            firebasePerformance = container "Firebase Performance Service" {
-                tags "Container 3p"
-            }
-            firebaseAppDistribution = container "Firebase App Distribution" {
-                tags "Container 3p"
-            }
-        }
+        !include model/google.dsl
+
         # LexisNexus services
-        lexisNexus = softwareSystem "LexisNexus Services" {
-            tags "Software System 3p"
-            tms = container "Threat Metrix API" {
-                tags "Container 3p"
-            }
-        }
+        !include model/lexisnexus.dsl
+
         # TransUnion services
-        transUnion = softwareSystem "TransUnion Services" {
-            tags "Software System 3p"
-            ff = container "FraudForce API" {
-                tags "Container 3p"
-            }
-        }
+        !include model/transunion.dsl
+
+        # Android Relationships
+        !include model/relationships/android.dsl
     }
 
     views {

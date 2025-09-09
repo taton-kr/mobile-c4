@@ -56,4 +56,21 @@ workspace extends ../workspace.dsl {
         android.banner.firebase -> www.google.firebaseAnalytics "Send event"
         android.banner.telemetry -> android.os.console "Log to console"
     }
+
+    views {
+        systemContext android {
+            include *
+            autolayout lr
+        }
+
+        container android.banner {
+            include *
+            autolayout lr
+        }
+
+        container android.os {
+            include *
+            autolayout lr
+        }
+    }
 }
